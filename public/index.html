@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<ul data-bind="foreach : sites">
+				<li >
+					<input data-bind="value : title" />
+					<a data-bind="click : $parent.removeSite">X</a>
+				</li>
+			</ul>
+			<input type="text" data-bind="value : siteTtle">
+			<button data-bind="click : addSite" class="btn btn-success">add</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
